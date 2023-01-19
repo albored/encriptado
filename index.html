@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Encriptado</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container-box">
+        <h1>Encriptado y desencriptado de textos</h1>
+        <main>
+          <div class="display-input">
+            <p class="error" style="opacity: 0">
+              <ion-icon name="warning-outline"></ion-icon> caracteres invalidos
+              Intente nuevamente...
+            </p>
+            <textarea
+              class="textarea-input"
+              id="textarea"
+              placeholder="Ingrese su texto aqui..."
+            ></textarea>
+            <p>solo minisculas y sin acentos o simbolos</p>
+
+            <div class="btns">
+              <button class="btn btn-encriptar">
+                <ion-icon
+                  class="btn-icon"
+                  name="lock-closed-outline"
+                ></ion-icon>
+                <span> encriptar</span>
+              </button>
+              <button class="btn btn-desencriptar">
+                <ion-icon class="btn-icon" name="lock-open-outline"></ion-icon>
+                <span> desencriptar</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="display-out">
+            <div class="display-out-container">
+              <div class="result-div hidden">
+                <p class="result-out"></p>
+                <button class="btn btn-copy hidden">copiar</button>
+              </div>
+
+              <img
+                class="img"
+                src="https://cdn-icons-png.flaticon.com/512/751/751463.png"
+                alt="magnifying glass image"
+              />
+            </div>
+          </div>
+        </main>
+        <a href="#" class="btn-info">
+          <ion-icon
+            style="color: #203a43"
+            name="information-circle-outline"
+          ></ion-icon>
+        </a>
+
+        <!-- <div class="info">
+        <p><span>Version: </span> 1.0.0</p>
+        <p>
+          <span>Descripcion:</span> Challenge de
+          <a href="https://www.oracle.com/lad/" target="_blank"
+            >Oracle - Alura.</a
+          >
+          Encriptador y desencriptador de Palabras.
+        </p>
+        <p><span>Autor:</span> Alvaro Cayo</p>
+
+        <button></button>
+      </div> -->
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
