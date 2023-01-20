@@ -7,6 +7,7 @@
 body {
   background-image: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   height: 100vh;
+  max-width: 2000px;
   font-family: "Sono", sans-serif;
   display: flex;
   align-items: center;
@@ -199,4 +200,92 @@ main .display-input p {
 
 .info p span {
   color: gray;
+}
+
+/* media */
+@media (max-width: 1020px) {
+  .container {
+    margin: 30px;
+    height: 100%;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+    width: 100%;
+  }
+
+  #textarea {
+    width: 100%;
+    height: 500px;
+    padding: 20px;
+    outline: none;
+    resize: none;
+    margin-bottom: 30px;
+    background-color: transparent;
+    border-radius: 15px;
+    font-size: 18px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.281);
+    color: inherit;
+  }
+
+  .display-input p {
+    display: none;
+  }
+}
+
+.result-out {
+  font-size: 18px;
+}
+
+.btns {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  text-transform: uppercase;
+  padding: 20px;
+}
+
+.btn {
+  font-size: 10px;
+  padding: 10px;
+}
+
+@media (max-width: 750px) {
+  h1 {
+    display: inline-block;
+    text-align: center;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  #textarea {
+    width: 100%;
+    height: 250px;
+    padding: 20px;
+    outline: none;
+    resize: none;
+    margin-bottom: 30px;
+    background-color: transparent;
+    border-radius: 15px;
+    font-size: 18px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.281);
+    color: inherit;
+  }
+
+  .display-out {
+    height: 250px;
+  }
+
+  .btn-info:link {
+    font-size: 30px;
+  }
 }
