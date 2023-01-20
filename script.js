@@ -12,7 +12,7 @@ const containerBox = document.querySelector(".container-box");
 
 btnEncriptar.addEventListener("click", function () {
   if (textInput.value === "") return;
-  if (textInput.value.split("").every((l) => l == +l)) {
+  if (textInput.value.split("").some((l) => l === +l)) {
     textInput.value = "";
     return textError();
   }
@@ -21,12 +21,15 @@ btnEncriptar.addEventListener("click", function () {
   textInput.value = "";
 
   const dictionary = "abcdefghijklmnñopqrstuvwxyz ".split("");
-  const dataUpperCase = data.some((el) => el === el.toUpperCase());
-  const dataSymbol = data.some((el) => {
-    dictionary.every((key) => key !== el);
-  });
+  const dataUpperCase = data.every((el) => el === el.toUpperCase());
 
-  if (dataUpperCase || !dataSymbol) handleEncriptar(data);
+  const dataSymbol = data.every((el) =>
+    dictionary.some((letra) => letra === el)
+  );
+  console.log(dataUpperCase);
+
+  if (!dataUpperCase && dataSymbol) handleEncriptar(data);
+  else textError();
 });
 
 btnDesencriptar.addEventListener("click", function () {
