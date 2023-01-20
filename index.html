@@ -10,77 +10,115 @@
       href="https://fonts.googleapis.com/css2?family=Sono:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="style.css" />
-    <title>Encriptado</title>
+    <title>Encriptado-v2</title>
   </head>
   <body>
     <div class="container">
-      <div class="container-box">
-        <h1>Encriptado y desencriptado de textos</h1>
-        <main>
+      <main class="main">
+        <h1>Juego de encriptado</h1>
+        <div class="display">
           <div class="display-input">
-            <p class="error" style="opacity: 0">
-              <ion-icon name="warning-outline"></ion-icon> caracteres invalidos
-              Intente nuevamente...
+            <p class="text-warning hidden">
+              <ion-icon
+                name="warning-outline"
+                style="padding-bottom: 2px"
+              ></ion-icon>
+              texto invalido
             </p>
             <textarea
-              class="textarea-input"
               id="textarea"
-              placeholder="Ingrese su texto aqui..."
+              placeholder="Escribe tu texto aqui..."
             ></textarea>
-            <p>solo minusculas y sin acentos o simbolos</p>
-
+            <p class="display-rules">Solo minusculas sin acentos ni simbolos</p>
             <div class="btns">
               <button class="btn btn-encriptar">
-                <ion-icon
-                  class="btn-icon"
-                  name="lock-closed-outline"
-                ></ion-icon>
-                <span> encriptar</span>
+                <ion-icon class="btn-icon" name="lock-closed-outline"></ion-icon
+                >Encriptar
               </button>
-              <button class="btn btn-desencriptar">
-                <ion-icon class="btn-icon" name="lock-open-outline"></ion-icon>
-                <span> desencriptar</span>
+              <button class="btn btn-decript">
+                <ion-icon class="btn-icon" name="lock-open-outline"></ion-icon
+                >Decriptar
               </button>
             </div>
           </div>
 
-          <div class="display-out">
-            <div class="display-out-container">
-              <div class="result-div hidden">
-                <p class="result-out"></p>
-                <button class="btn btn-copy hidden">copiar</button>
-              </div>
+          <div class="display-output">
+            <div class="display-out display-out-img">
+              <svg
+                viewBox="0 0 36 36"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                role="img"
+                class="iconify iconify--twemoji"
+                preserveAspectRatio="xMidYMid meet"
+                fill="#000000"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    fill="#9AAAB4"
+                    d="M27.388 24.642L24.56 27.47l-4.95-4.95l2.828-2.828z"
+                  ></path>
+                  <path
+                    fill="#66757F"
+                    d="M34.683 29.11l-5.879-5.879a2 2 0 0 0-2.828 0l-2.828 2.828a2 2 0 0 0 0 2.828l5.879 5.879a4 4 0 1 0 5.656-5.656z"
+                  ></path>
+                  <circle
+                    fill="#8899A6"
+                    cx="13.586"
+                    cy="13.669"
+                    r="13.5"
+                  ></circle>
+                  <circle
+                    fill="#BBDDF5"
+                    cx="13.586"
+                    cy="13.669"
+                    r="9.5"
+                  ></circle>
+                </g>
+              </svg>
+            </div>
 
-              <img
-                class="img"
-                src="https://cdn-icons-png.flaticon.com/512/751/751463.png"
-                alt="magnifying glass image"
-              />
+            <div class="display-out display-out-result hidden">
+              <p class="display-result">a</p>
+              <button class="btn btn-copy">Copiar/limpiar</button>
             </div>
           </div>
-        </main>
-        <a href="#" class="btn-info">
-          <ion-icon
-            style="color: #203a43"
+        </div>
+        <a class="about" href="#" target="_blank"
+          ><ion-icon
+            style="color: azure"
             name="information-circle-outline"
-          ></ion-icon>
-        </a>
+          ></ion-icon
+        ></a>
+      </main>
 
-        <!-- <div class="info">
-        <p><span>Version: </span> 1.0.0</p>
+      <div class="about-container hidden">
+        <p><span>Version: </span>2.0.0</p>
         <p>
-          <span>Descripcion:</span> Challenge de
-          <a href="https://www.oracle.com/lad/" target="_blank"
-            >Oracle - Alura.</a
-          >
-          Encriptador y desencriptador de Palabras.
+          <span>Descripcion: </span>Challenge de Oracle -
+          <a href="" target="_blank">Alura. Encriptador</a> y desencriptador de
+          Palabras.
         </p>
-        <p><span>Autor:</span> Alvaro Cayo</p>
-
-        <button></button>
-      </div> -->
+        <p>
+          <span>Autor: </span>Alvaro Cayo
+          <a
+            class="btn-oracle"
+            href="https://github.com/albored"
+            target="_blank"
+            ><ion-icon name="logo-github"></ion-icon
+          ></a>
+        </p>
+        <button class="btn btn-home">
+          <ion-icon name="home-outline"></ion-icon> Back to Home
+        </button>
       </div>
     </div>
 
